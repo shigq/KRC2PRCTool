@@ -1,0 +1,21 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox fx:id="root" style="-fx-padding: 10px" spacing="5" fx:controller="com.poputar.krc2prc.controllers.KRC2PRCToolViewController" xmlns:fx="http://javafx.com/fxml">
+   <HBox spacing="10" style="-fx-alignment: center-left">
+   		<Label text="酷狗歌词目录："/>
+   		<TextField fx:id="tfFilePath" disable="true" prefColumnCount="20"/>
+   		<Button text="选择目录" fx:id="btnChooseFile" onAction="#btnOpenFilePathHandler"/>
+   		<Button text="开始转换" fx:id="btnOk" disable="true" onAction="#btnTranseferKrc2PrcHandler"/>
+   </HBox> 
+   <HBox spacing="10" style="-fx-alignment: center-left">
+   		<Label text="歌词文件总数："/>
+   		<TextField fx:id="tfTotalFiles" disable="true" prefColumnCount="4" text="0"/>
+   		<Label text="转换进度:"/>
+   		<TextField fx:id="tfProgress" disable="true" prefColumnCount="8" text="[0/0]"/>
+   </HBox> 
+   
+   <HBox spacing="10" style="-fx-alignment: center-left">
+   		<TextArea VBox.vgrow="ALWAYS" fx:id="taErrorMsg"/>
+   </HBox> 
+</VBox>
+
